@@ -31,8 +31,9 @@
                             </a>
                         </th>
                         <td>{{ t.title }}</td>
-                        <td>{{ t.update_date|date:"Y/m/d" }}</td> <!-- $timestamp -->
+                        <td>{{ t.update_date|date:"m月d日 H時:i分" }}</td> 
                         <!-- plus 通知日時 -->
+                        <!-- <td>{{ t.update_date|date:"m月d日 H時:i分" }}</td>  -->
                         <td>
                             <form action="/delete/{{t.todo_id}}"
                                 style="display: inline;"

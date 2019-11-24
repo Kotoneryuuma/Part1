@@ -22,6 +22,15 @@ class Todo(models.Model):
       'date published',
       auto_now=True,
     )
+    # insert_remind_date = models.DateTimeField(
+    #   '通知日時',
+    #   auto_now_add=True,
+    # )
+    # update_remind_date = models.DateTimeField(
+    #   '通知日時',
+    #   auto_now=True,
+    # )
+
 
 class TodoForm(ModelForm):
     class Meta:

@@ -17,6 +17,12 @@
                 {% csrf_token %}
                 <input type="hidden" name="todo_id" value="{{ todo_id }}"/>
                 {% bootstrap_form form %}
+                <div>
+                    <label for="remind_time">通知日時</label>   
+                        <p>
+                            <input type="datetime-local" name="remind_time" value="{{ todo_id }}"/>    
+                        </p>
+                </div>
                 <button type="submit" class="btn btn-primary">登録</button>
             </form>
         </div>
