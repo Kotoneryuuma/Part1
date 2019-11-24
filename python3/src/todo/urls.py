@@ -7,4 +7,5 @@ urlpatterns = [
     path('search', views.search, name='search'),
     path('regist', views.regist, name='regist'),
     path('edit/<int:todo_id>', views.edit, name='edit'),
+    path('delete/<int:todo_id>', views.delete, name='delete'),
 ]

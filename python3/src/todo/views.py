@@ -41,3 +41,8 @@ def regist(request):
         }
         return render(request, 'todo/edit.html', params)
 
+def delete(request, todo_id):
+    item_to_delete = Todo.objects.get(todo_id=todo_id)
+    item_to_delete.delete()
+    return HttpResponseRedirect('/')
+

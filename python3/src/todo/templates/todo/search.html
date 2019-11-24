@@ -17,8 +17,9 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">たいとる</th>
-                        <th scope="col">こうしんび</th>
+                        <th scope="col">タイトル</th>
+                        <th scope="col">作成日時</th>
+                        <th scope="col">通知日時</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +31,15 @@
                             </a>
                         </th>
                         <td>{{ t.title }}</td>
-                        <td>{{ t.update_date|date:"Y/m/d" }}</td>
+                        <td>{{ t.update_date|date:"Y/m/d" }}</td> <!-- $timestamp -->
+                        <!-- plus 通知日時 -->
+                        <td>
+                            <form action="/delete/{{t.todo_id}}"
+                                style="display: inline;"
+                                method="post">{% csrf_token %}
+                                <input type="submit" value="delete"/>
+                            </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
